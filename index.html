@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pisang Krispi Krezz< - Promo 10K/2pcs!</title>
+  <meta name="description" content="Pisang Krispi renyah luar, lumer dalam! Promo spesial: Rp10.000 untuk 2 pcs (100 pesanan pertama). Pesan sekarang via WA!">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="PROMO PISANG KRISPI - Hanya 10K/2pcs!" />
+  <meta property="og:description" content="Renyah di luar, lumer di dalam! Diskon 100 pesanan pertama. Klik untuk pesan via WA!" />
+  <meta property="og:image" content="https://i.imgur.com/3zK8vL9.jpg" />
+  <meta property="og:url" content="https://pisangkrezz.github.io" />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root {
+      --primary: #ff6d00;
+      --dark: #5d4037;
+      --accent: #bf360c;
+      --light: #fdf4e6;
+      --glow: 0 0 20px rgba(255, 109, 0, 0.5);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fdf4e6 0%, #ffe0b2 100%);
+      color: var(--dark);
+      padding: 15px;
+      overflow-x: hidden;
+      position: relative;
+    }
+    /* MOTIF CHECKER ATAS & BAWAH */
+    .checker-top, .checker-bottom {
+      position: absolute;
+      left: 0; right: 0;
+      height: 30px;
+      background: repeating-linear-gradient(45deg, #8d6e63, #8d6e63 10px, #6d4c41 10px, #6d4c41 20px);
+      opacity: 0.2;
+      z-index: 1;
+    }
+    .checker-top { top: 0; }
+    .checker-bottom { bottom: 0; }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      max-width: 480px;
+      margin: 20px auto;
+      background: white;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+      animation: fadeIn 1s ease-out;
+    }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+    header {
+      background: linear-gradient(135deg, #8d6e63, #6d4c41);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-weight: 900;
+      font-size: 2rem;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .hero {
+      padding: 30px 20px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* MOTIF AWAN KIRI & KANAN (SVG INLINE) */
+    .cloud-left, .cloud-right {
+      position: absolute;
+      width: 100px;
+      opacity: 0.7;
+      z-index: 1;
+      animation: floatCloud 6s ease-in-out infinite;
+    }
+    .cloud-left { left: -30px; top: 30px; transform: rotate(-15deg); }
+    .cloud-right { right: -25px; top: 50px; transform: rotate(20deg) scaleX(-1); }
+    @keyframes floatCloud {
+      0%, 100% { transform: translateY(0) rotate(-15deg); }
+      50% { transform: translateY(-15px) rotate(-12deg); }
+    }
+
+    .food-img {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 380px;
+      border-radius: 24px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+      margin: 0 auto 25px;
+      display: block;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+    .tagline {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      margin: 15px 0;
+    }
+
+    .price-box {
+      background: var(--dark);
+      color: white;
+      padding: 18px 35px;
+      border-radius: 50px;
+      font-size: 2rem;
+      font-weight: 900;
+      display: inline-block;
+      position: relative;
+      box-shadow: var(--glow);
+      animation: pulse 2s infinite;
+      margin: 20px 0;
+    }
+    @keyframes pulse { 0%, 100% { box-shadow: var(--glow); } 50% { box-shadow: 0 0 30px rgba(255, 109, 0, 0.8); } }
+
+    .old-price {
+      position: absolute;
+      top: -15px;
+      left: 30px;
+      font-size: 1rem;
+      color: #ff8a65;
+      text-decoration: line-through;
+      background: white;
+      padding: 2px 8px;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+
+    .countdown {
+      background: #ffebee;
+      color: var(--accent);
+      padding: 12px 20px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      margin: 15px auto;
+      max-width: 300px;
+      border: 2px dashed var(--accent);
+    }
+    .countdown span { font-weight: 900; color: var(--primary); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 32px;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 1.2rem;
+      margin: 12px 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    .btn-wa { background: #25D366; color: white; }
+    .btn-ig { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: white; }
+    .btn:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
+
+    .social { margin: 25px 0; font-size: 1.3rem; font-weight: 600; }
+    .social a { color: var(--primary); text-decoration: none; }
+
+    footer {
+      background: var(--dark);
+      color: #ccc;
+      text-align: center;
+      padding: 18px;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 480px) {
+      header { font-size: 1.6rem; padding: 15px; }
+      .food-img { max-width: 90%; }
+      .price-box { font-size: 1.6rem; padding: 15px 25px; }
+      .btn { padding: 14px 25px; font-size: 1.1rem; }
+      .cloud-left, .cloud-right { width: 80px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- MOTIF SPARKLE -->
+  <div class="sparkles"></div>
+
+  <!-- MOTIF CHECKER -->
+  <div class="checker-top"></div>
+  <div class="checker-bottom"></div>
+
+  <div class="container">
+    <header>PISANG KRISPI</header>
+
+    <div class="hero">
+
+      <!-- MOTIF AWAN KIRI (SVG INLINE) -->
+      <svg class="cloud-left" viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+        <path d="M30 50 Q10 40, 15 25 Q20 10, 35 15 Q50 10, 55 25 Q60 40, 40 50 Q30 55, 30 50Z" fill="#6d4c41"/>
+        <path d="M80 45 Q60 35, 65 20 Q70 5, 85 10 Q100 5, 105 20 Q110 35, 90 45 Q80 50, 80 45Z" fill="#8d6e63"/>
+        <path d="M55 60 Q35 50, 40 35 Q45 20, 60 25 Q75 20, 80 35 Q85 50, 65 60 Q55 65, 55 60Z" fill="#5d4037"/>
+      </svg>
+
+      <!-- MOTIF AWAN KANAN (SVG INLINE) -->
+      <svg class="cloud-right" viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+        <path d="M30 50 Q10 40, 15 25 Q20 10, 35 15 Q50 10, 55 25 Q60 40, 40 50 Q30 55, 30 50Z" fill="#6d4c41"/>
+        <path d="M80 45 Q60 35, 65 20 Q70 5, 85 10 Q100 5, 105 20 Q110 35, 90 45 Q80 50, 80 45Z" fill="#8d6e63"/>
+        <path d="M55 60 Q35 50, 40 35 Q45 20, 60 25 Q75 20, 80 35 Q85 50, 65 60 Q55 65, 55 60Z" fill="#5d4037"/>
+      </svg>
+
+      <!-- GAMBAR PISANG (PNG TRANSPARAN) -->
+      <img src="PISANGKRISPI.png" 
+     alt="Pisang Krispi Keju" width="400">
+
+      <p class="tagline">RENYAH DI LUAR, LUMER DI DALAM!</p>
+
+      <div class="price-box">
+        <span class="old-price">14K</span>
+        HANYA <strong>Rp10.000</strong> / 2PCS
+      </div>
+
+      <div class="countdown">
+        Promo berlaku untuk <span>100 pesanan pertama</span>!<br>
+        <div id="timer">Memuat hitungan mundur...</div>
+      </div>
+      
+           <!-- VIDEO PROMOSI -->
+      <video controls style="border-radius: 8px; max-width: 100%; height: auto;" width="480">
+          <source src="video.mp4" type="video/mp4">
+          Browser Anda tidak mendukung tag video.
+      </video>
+ 
+    <footer>
+      &copy; 2025 Pisang Krezz. Promo berlaku hingga 100 pesanan pertama.<br>
+      Hubungi kami via WhatsApp • Dibuat dengan ❤️
+    </footer>
+  
+  <a href="https://drive.google.com/file/d/1JEHLZejTxEwtg1h3WLwfALjGshzHUrn5/view?usp=drivesdk" 
+     target="_blank" 
+     class="btn" 
+     style="background:#ff6d00; color:white; margin-top:15px; display:inline-flex;">
+    <i class="fas fa-file-pdf"></i> HPP PISANG KRISPI
+  </a>
+</div>
+    
+  <!-- Hitung Mundur -->
+  <script>
+    const promoEnd = new Date('2025-11-30T23:59:59').getTime();
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = promoEnd - now;
+      if (distance < 0) {
+        document.getElementById('timer').innerHTML = 'Promo telah berakhir!';
+        clearInterval(timer);
+        return;
+              }
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      document.getElementById('timer').innerHTML = `${days} hari ${hours} jam ${minutes} menit lagi!`;
+    }, 1000);
+  </script>
+
+</body>
+</html>
